@@ -2,9 +2,8 @@
     function checkValidString ($str) {
 
         if (((strstr($str, "book") !== false) && (strstr($str, "restaurant") === false))
-           || ((strstr($str, "book") === false) && (strstr($str, "restaurant") !== false))
-        ) {
-          return true;
+           || ((strstr($str, "book") === false) && (strstr($str, "restaurant") !== false))) {
+            return true;
         }
         return false;
      }
