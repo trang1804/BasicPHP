@@ -30,18 +30,16 @@
 
         function checkValidString ($str) 
         {
-            if (strpos($str, "book") == true) {
-                if (strpos($str, "restaurant") == true) {
+            if (strstr($str, "book") == true) {
+                if (strstr($str, "restaurant") == true) {
                     return false;
-                } else {
-                    return true;
                 }
+                    return true;
             } else {
-                if (strpos($str, "restaurant") == true) {
+                if (strstr($str, "restaurant") == true) {
                     return true;
-                } else {
-                    return false;
                 }
+                    return false;
             }
         }
 
