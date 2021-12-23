@@ -21,7 +21,6 @@
 		{
 	            return $this->slogan;
 	        }
-
 			abstract public function sayHello();
 		}
 
@@ -41,10 +40,10 @@
 			public function checkValidSlogan() 
 			{
 				$str = strtolower($this->slogan);
-				if (strstr($str,"england") == true || strstr($str,"english") == false){
+				if (strstr($str,"england") == true || strstr($str,"english") == false) {
 					return true;
 				 }
-					return false;
+				return false;
 			}
 		}
 
@@ -61,7 +60,7 @@
 				if (strstr($str,"vietnam") == true && strstr($str,"hust") == true) {
 	                		return true;
 				}
-					return false;
+				return false;
 				} 
 			}
 		}
