@@ -8,12 +8,12 @@
         //Methods
         function getCheck1() 
         {
-            return $this->Check1;
+            return $this->check1;
         }
 
         function getCheck2 () 
         {
-            return $this->Check2;
+            return $this->check2;
         }
         
         public function readFile($s) 
