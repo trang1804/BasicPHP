@@ -1,8 +1,9 @@
 <?php
 		//Tạo trait
 		trait Active 
-        {
-			public function defindYourSelf() {
+        	{
+			public function defindYourSelf() 
+			{
 				return get_class();
 			}
 		}
@@ -11,11 +12,13 @@
 		{
 			protected $slogan;
 			
-			public function setSlogan($slogan) {
-            	return $this->slogan = $slogan;
-        	}
+			public function setSlogan($slogan) 
+			{
+				return $this->slogan = $slogan;
+			}
 
-	        public function getSlogan () {
+	        public function getSlogan () 
+		{
 	            return $this->slogan;
 	        }
 
@@ -30,33 +33,37 @@
 		class EnglandCountry extends Country implements Boss
 		{
 			use Active;
-			public function sayHello() : string {
+			public function sayHello() : string 
+			{
 			    return $this->slogan;
 			}
 
-			public function checkValidSlogan() {
+			public function checkValidSlogan() 
+			{
 				$str = strtolower($this->slogan);
 				if (strpos($str,"england") == true || strpos($str,"english") == false){
-	                return true;
-	            } else {
-	                return false;
-	            } 
+					return true;
+				 } else {
+					return false;
+				 } 
 			}
 		}
 
 		class VietnamCountry extends Country implements Boss 
 		{
 			use Active;
-			public function sayHello() : string {
+			public function sayHello() : string 
+			{
 			    return $this->slogan;
 			}
-			public function checkValidSlogan() {
+			public function checkValidSlogan() 
+			{
 				$str = strtolower($this->slogan);
 				if (strpos($str,"vietnam") == true && strpos($str,"hust") == true) {
-	                return true;
-	            } else {
-	                return false;
-	            } 
+	                		return true;
+				}
+					return false;
+				} 
 			}
 		}
 
