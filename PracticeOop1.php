@@ -30,17 +30,11 @@
 
         function checkValidString ($str) 
         {
-            if (strstr($str, "book") == true) {
-                if (strstr($str, "restaurant") == true) {
-                    return false;
-                }
-                    return true;
-            } else {
-                if (strstr($str, "restaurant") == true) {
-                    return true;
-                }
-                    return false;
+            if (((strstr($str, "book") !== false) && (strstr($str, "restaurant") === false))
+                || ((strstr($str, "book") === false) && (strstr($str, "restaurant") !== false))) {
+                return true;
             }
+            return false;
         }
 
         public function writeFile($file) 
