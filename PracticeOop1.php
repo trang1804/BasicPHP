@@ -2,8 +2,8 @@
     class ExerciseString
     {
         //Properties
-        public $Ckeck1;
-        public $Ckeck2;
+        public $ckeck1;
+        public $ckeck2;
 
         //Methods
         function getCheck1() 
@@ -54,11 +54,11 @@
     }
 
     $object1 = new ExerciseString();
-    $object1->Check1 = $object1->checkValidString($object1->readFile('file1.txt'));
+    $object1->check1 = $object1->checkValidString($object1->readFile('file1.txt'));
     var_dump($object1->getCheck1());    //bool(true);
     echo "</br>";
 
-    $object1->Check2 = $object1->checkValidString($object1->readFile('file2.txt'));
+    $object1->check2 = $object1->checkValidString($object1->readFile('file2.txt'));
     var_dump($object1->getCheck2()); // bool(false)
 
     $rs1 = $object1->getCheck1() ? "Chuỗi 1 là chuỗi hợp lệ" : "Chuỗi 1 là chuỗi ko hợp lệ";
