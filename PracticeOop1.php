@@ -6,15 +6,18 @@
         public $Ckeck2;
 
         //Methods
-        function getCheck1() {
+        function getCheck1() 
+        {
             return $this->Check1;
         }
 
-        function getCheck2 () {
+        function getCheck2 () 
+        {
             return $this->Check2;
         }
         
-        public function readFile($s) {
+        public function readFile($s) 
+        {
             $File = fopen($s, 'r');
             if (!$File) {
                 echo 'Not success';
@@ -25,7 +28,8 @@
             fclose($File);
         }
 
-        function checkValidString ($str) {
+        function checkValidString ($str) 
+        {
             if (strpos($str, "book") == true) {
                 if (strpos($str, "restaurant") == true) {
                     return false;
@@ -41,7 +45,8 @@
             }
         }
 
-        public function writeFile($file) {
+        public function writeFile($file) 
+        {
             $rs = fopen("result_file.txt", "w");
             fwrite($rs, $file);
             fclose($rs);
