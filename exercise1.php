@@ -1,20 +1,13 @@
 <?php
     function checkValidString ($str) {
 
-        if (strpos($str, "book") == true) {
-            if (strpos($str, "restaurant") == true) {
-                return false;
-            } else {
-                return true;
-            }
-        } else {
-            if (strpos($str, "restaurant") == true) {
-                return true;
-            } else {
-                return false;
-            }
+        if (((strstr($str, "book") !== false) && (strstr($str, "restaurant") === false))
+           || ((strstr($str, "book") === false) && (strstr($str, "restaurant") !== false))
+        ) {
+          return true;
         }
-    }
+        return false;
+     }
 
     //BaiTap1
     var_dump(checkValidString("I like going camping"));         //fale
