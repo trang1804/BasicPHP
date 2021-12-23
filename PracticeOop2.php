@@ -16,7 +16,7 @@
 			{
 				return $this->slogan = $slogan;
 			}
-
+		}
 	        public function getSlogan () 
 		{
 	            return $this->slogan;
@@ -41,11 +41,10 @@
 			public function checkValidSlogan() 
 			{
 				$str = strtolower($this->slogan);
-				if (strpos($str,"england") == true || strpos($str,"english") == false){
+				if (strstr($str,"england") == true || strstr($str,"english") == false){
 					return true;
-				 } else {
+				 }
 					return false;
-				 } 
 			}
 		}
 
@@ -59,7 +58,7 @@
 			public function checkValidSlogan() 
 			{
 				$str = strtolower($this->slogan);
-				if (strpos($str,"vietnam") == true && strpos($str,"hust") == true) {
+				if (strstr($str,"vietnam") == true && strstr($str,"hust") == true) {
 	                		return true;
 				}
 					return false;
